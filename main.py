@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import CScanner
+
 #
 #Scan for everything( Names, IPs', Ports )
 #Scan for Names and IPs
@@ -8,6 +10,7 @@
 #
 def menu():
     answer = ""
+
     print "1. Scan for everything ( Names, IPs, Ports )"
     print "2. Scan for Names and IPs"
     print "3. Search for Name in the network"
@@ -26,5 +29,7 @@ def menu():
 
 def process(menuChoice):
     print menuChoice
+    network = CScanner.Scanner()
+    print str(network.ourIP)
 
 process(menu())
