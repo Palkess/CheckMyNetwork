@@ -28,8 +28,19 @@ def menu():
     return answer
 
 def process(menuChoice):
-    print menuChoice
     network = CScanner.Scanner()
-    print str(network.ourIP)
+
+    if int(menuChoice) == 1:
+        network.scanAll()
+    elif int(menuChoice) == 2:
+    	print "2"
+    elif int(menuChoice) == 3:
+    	print "3"
+    elif int(menuChoice) == 4:
+    	print "4"
+    elif int(menuChoice) == 0:
+    	print "Exit the program"
+    else:
+        print "Non valid"
 
 process(menu())
